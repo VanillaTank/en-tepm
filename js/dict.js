@@ -481,7 +481,7 @@ export default [
   { en: "to hand", ru: "передавать, вручать" },
   { en: "obedient", ru: "послушный" },
   { en: "to talk back", ru: "дерзить" },
-  { en: "punch", ru: "бить кулаком, играть кулаком" },
+  { en: "punch", ru: "бить кулаком, удар кулаком" },
   { en: "at this point", ru: "на этот момент, на этой стадии" },
   { en: "to breed", ru: "разможаться" },
   { en: "destination", ru: "место назначения" },

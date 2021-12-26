@@ -1,19 +1,39 @@
 import dict from './dict.js';
 
 window.onload = () => {
-    const get_random_btn = $('#get_random_btn');
-    const get_ru_btn = $('#get_ru_btn');
+    const get_random_btn_en = $('#get_random_btn_en');
+    const get_random_btn_ru = $('#get_random_btn_ru');
+    const get_translate_btn_ru = $('#get_ru_btn_ru');
+    const get_translate_btn_en = $('#get_ru_btn_en');
 
-    get_random_btn.addEventListener('click', () => {
-        getRandomWords();
-        get_ru_btn.removeAttribute("disabled");
-        get_ru_btn.innerText = 'Показать перевод'
+    get_random_btn_en.addEventListener('click', () => {
+        getRandomWords("en", "ru");
+        get_translate_btn_ru.removeAttribute("disabled");
+        get_translate_btn_en.setAttribute("disabled", "disabled");
+        get_translate_btn_ru.innerText = 'Показать перевод'
+
+        
     });
+    
+    get_translate_btn_ru.addEventListener('click', (evt) => {
+            toggleLangVision('.ru');
+            rewriteBntName(evt)
+        })
 
-    get_ru_btn.addEventListener('click', (evt) => { 
-        toggleRuVision();
-        rewriteBntName(evt)
-    })
+    get_random_btn_ru.addEventListener('click', () => {
+        getRandomWords("ru", "en");
+        get_translate_btn_en.removeAttribute("disabled");
+        get_translate_btn_ru.setAttribute("disabled", "disabled");
+        get_translate_btn_en.innerText = 'Показать перевод'
+
+        
+    });
+    
+    get_translate_btn_en.addEventListener('click', (evt) => {
+            toggleLangVision('.en');
+            rewriteBntName(evt)
+        })
+
 
 }
 
@@ -22,15 +42,15 @@ function $(el) {
     return document.querySelector(el);
 }
 
-function getRandomWords() {
+function getRandomWords(lang, secLang) {
     const output_random = $('#output_random');
     output_random.innerHTML = '';
     const random_indexes = crateRandomIndexes()
     for (let i = 0; i < random_indexes.length; i++) {
         output_random.innerHTML += `
             <li>
-                <span class="en">${dict[random_indexes[i]].en}</span>
-                <span class="ru hidden"> - ${dict[random_indexes[i]].ru}</span>
+                <span class="${lang}">${dict[random_indexes[i]][lang]}</span>
+                <span class="${secLang} hidden"> - ${dict[random_indexes[i]][secLang]}</span>
             </li>`;
     }
 
@@ -48,15 +68,15 @@ function crateRandomIndexes() {
     return arr;
 }
 
-function toggleRuVision() {
-    const ru_words = [...document.querySelectorAll('.ru')];
-    ru_words.forEach(  el => {
+function toggleLangVision(toLang) {
+    const values = [...document.querySelectorAll(toLang)];
+    values.forEach(el => {
         el.classList.toggle("hidden")
-    } )
+    })
 }
 
 function rewriteBntName(evt) {
-    if(evt.target.innerText === 'Показать перевод' ) {
+    if (evt.target.innerText === 'Показать перевод') {
         evt.target.innerText = 'Скрыть перевод'
     } else {
         evt.target.innerText = 'Показать перевод'
