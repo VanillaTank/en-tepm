@@ -9,6 +9,16 @@ ul>li {
     list-style: none;
     padding: 5px 0;
 }
+.video-place {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: #e4e4ee;
+}
+
 .btn {
     margin: 15px 0;
     padding: 15px 30px;
@@ -29,6 +39,8 @@ ul>li {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
 }
 .word-list {
     font-size: 34px;
