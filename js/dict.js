@@ -151,7 +151,7 @@ export default [
     {en: "rise", ru: "подниматься, повышать, возрастать"},
     {en: "whether", ru: "ли"},
     {en: "nurse", ru: "мед. сестра"},
-    {en: "suggest", ru: "предполагать"},
+    {en: "suggest", ru: "предлагать"},
     {en: "insist", ru: "настаивать"},
     {en: "laundry", ru: "прачечная, стирка"},
     {en: "to complete", ru: "завершать"},
