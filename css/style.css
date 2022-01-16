@@ -7,6 +7,7 @@
     font-family: 'Lora', serif;
     font-size: 24px;
     color: #F2E8D5;
+    cursor: url('../aa.png'), default;
 }
 body {
     position: relative;
@@ -21,7 +22,7 @@ ul>li {
     background-color: #CBC4B7;
     border: none;
     font-size: 16px;
-    cursor: pointer;
+    cursor: url('../aa.png'), pointer;
     display: inline-block;
     min-width: 100px;
     max-width: 207px;
@@ -120,12 +121,13 @@ input[type=range]::-webkit-slider-runnable-track {
     height: 2px;
     background-color: #CBC4B7;
     border-radius: 1px;
+    cursor: url('../aa.png'), pointer;
   }
 input[type=range]::-webkit-slider-thumb {
     background: #77230F;
     border: 1px solid #77230F;
     border-radius: 12px/100%;
-    cursor: pointer;
+    cursor: url('../aa.png'), pointer;
     width:15px;
     height: 26px;
     -webkit-appearance: none;
@@ -134,23 +136,26 @@ input[type=range]::-webkit-slider-thumb {
 }
 input[type=range]::-webkit-slider-thumb:active {
     box-shadow: 0 0 3px rgba(242, 232, 213, .59);
+    cursor: url('../aa.png'), pointer;
 }
 
 input[type=range]::-moz-range-track {
     border-radius: 1px;
     height: 2px;
     background-color: #CBC4B7;
+    cursor: url('../aa.png'), pointer;
 }
 input[type=range]::-moz-range-thumb {
     background: #77230F;
     border: 1px solid #77230F;
     border-radius: 10px/100%;
-    cursor: pointer;
+    cursor: url('../aa.png'), pointer;
     width:15px;
     height: 26px;
 }
 input[type=range]::-moz-range-thumb:active {
     box-shadow: 0 0 3px rgba(242, 232, 213, .59);
+    cursor: url('../aa.png'), pointer;
 }
 /* слайдер конец */
 
