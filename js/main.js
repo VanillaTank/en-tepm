@@ -21,31 +21,31 @@ window.onload = () => {
 
     btn_play.addEventListener('click', () => { on_click_btn_play(sound_HP_GRIFFINDOR, img_play, img_pause) }, false)
 
+    sizeRenameBtn(window.innerWidth, get_translate_btn_en, get_translate_btn_ru);
+    window.addEventListener(`resize`, event => {
+        sizeRenameBtn(window.innerWidth, get_translate_btn_en, get_translate_btn_ru);
+    }, false);
 
     get_random_btn_en.addEventListener('click', () => {
         getRandomWords("en", "ru");
         get_translate_btn_ru.removeAttribute("disabled");
         get_translate_btn_en.setAttribute("disabled", "disabled");
-        get_translate_btn_ru.innerText = 'Показать перевод'
-
-
     });
 
     get_translate_btn_ru.addEventListener('click', (evt) => {
         toggleLangVision('.ru');
-        rewriteBntName(evt)
+        rewriteBntName(evt.currentTarget)
     })
 
     get_random_btn_ru.addEventListener('click', () => {
         getRandomWords("ru", "en");
         get_translate_btn_en.removeAttribute("disabled");
         get_translate_btn_ru.setAttribute("disabled", "disabled");
-        get_translate_btn_en.innerText = 'Показать перевод';
     });
 
     get_translate_btn_en.addEventListener('click', (evt) => {
         toggleLangVision('.en');
-        rewriteBntName(evt)
+        rewriteBntName(evt.currentTarget)
     })
 
 
@@ -58,6 +58,36 @@ window.onload = () => {
 // -------------------------------------
 function $(el) {
     return document.querySelector(el);
+}
+
+function sizeRenameBtn (width, get_translate_btn_en, get_translate_btn_ru) {
+    if (width <= '403') {
+        if (get_translate_btn_ru.innerText === 'ПОКАЗАТЬ ПЕРЕВОД' || get_translate_btn_ru.innerText === 'ПЕРЕВОД') {
+            get_translate_btn_ru.textContent = 'ПЕРЕВОД'
+        } else {
+            get_translate_btn_ru.textContent = 'СКРЫТЬ'
+        }
+
+        if(get_translate_btn_en.innerText === 'ПОКАЗАТЬ ПЕРЕВОД' || get_translate_btn_en.innerText === 'ПЕРЕВОД') {
+            get_translate_btn_en.textContent = 'ПЕРЕВОД'
+        } else {
+            console.log(get_translate_btn_en.innerText);
+            get_translate_btn_en.textContent = 'СКРЫТЬ'
+        }
+    } else {
+        if (get_translate_btn_ru.innerText === 'ПОКАЗАТЬ ПЕРЕВОД' || get_translate_btn_ru.innerText === 'ПЕРЕВОД') {
+            get_translate_btn_ru.textContent = 'ПОКАЗАТЬ ПЕРЕВОД'
+        } else {
+            get_translate_btn_ru.textContent = 'СКРЫТЬ ПЕРЕВОД'
+        }
+
+        if(get_translate_btn_en.innerText === 'ПОКАЗАТЬ ПЕРЕВОД' || get_translate_btn_en.innerText === 'ПЕРЕВОД') {
+            get_translate_btn_en.textContent = 'ПОКАЗАТЬ ПЕРЕВОД'
+        } else {
+            console.log(get_translate_btn_en.innerText);
+            get_translate_btn_en.textContent = 'СКРЫТЬ ПЕРЕВОД'
+        }
+    }
 }
 
 function on_click_btn_play(sound, img_play, img_pause) {
@@ -109,10 +139,14 @@ function toggleLangVision(toLang) {
     })
 }
 
-function rewriteBntName(evt) {
-    if (evt.target.innerText === 'Показать перевод') {
-        evt.target.innerText = 'Скрыть перевод'
-    } else {
-        evt.target.innerText = 'Показать перевод'
+function rewriteBntName(btn) {
+    if (btn.innerText === 'ПОКАЗАТЬ ПЕРЕВОД') {
+        btn.textContent = 'СКРЫТЬ ПЕРЕВОД'
+    } else if (btn.innerText === 'СКРЫТЬ ПЕРЕВОД') {
+        btn.textContent = 'ПОКАЗАТЬ ПЕРЕВОД'
+    } else if (btn.innerText === 'ПЕРЕВОД') {
+        btn.textContent = 'СКРЫТЬ'
+    } else if (btn.innerText === 'СКРЫТЬ') {
+        btn.textContent = 'ПЕРЕВОД'
     }
 }

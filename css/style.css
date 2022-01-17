@@ -7,7 +7,7 @@
     font-family: 'Lora', serif;
     font-size: 24px;
     color: #F2E8D5;
-    cursor: url('../aa.png'), default;
+    cursor: url('../img/cursor.png'), default;
 }
 body {
     position: relative;
@@ -22,7 +22,7 @@ ul>li {
     background-color: #CBC4B7;
     border: none;
     font-size: 16px;
-    cursor: url('../aa.png'), pointer;
+    cursor: url('../img/cursor.png'), pointer;
     display: inline-block;
     min-width: 100px;
     max-width: 207px;
@@ -114,20 +114,21 @@ ul>li {
     width: 2px;
     height: 20px;
     background-color: #CBC4B7;
-    z-index: -1;
 }
 
 input[type=range]::-webkit-slider-runnable-track {
     height: 2px;
     background-color: #CBC4B7;
     border-radius: 1px;
-    cursor: url('../aa.png'), pointer;
+    cursor: url('../img/cursor.png'), pointer;
   }
 input[type=range]::-webkit-slider-thumb {
+    position: relative;
+    z-index: 2;
     background: #77230F;
     border: 1px solid #77230F;
     border-radius: 12px/100%;
-    cursor: url('../aa.png'), pointer;
+    cursor: url('../img/cursor.png'), pointer;
     width:15px;
     height: 26px;
     -webkit-appearance: none;
@@ -136,32 +137,33 @@ input[type=range]::-webkit-slider-thumb {
 }
 input[type=range]::-webkit-slider-thumb:active {
     box-shadow: 0 0 3px rgba(242, 232, 213, .59);
-    cursor: url('../aa.png'), pointer;
+    cursor: url('../img/cursor.png'), pointer;
 }
 
 input[type=range]::-moz-range-track {
     border-radius: 1px;
     height: 2px;
     background-color: #CBC4B7;
-    cursor: url('../aa.png'), pointer;
+    cursor: url('../img/cursor.png'), pointer;
 }
 input[type=range]::-moz-range-thumb {
+    position: relative;
+    z-index: 2;
     background: #77230F;
     border: 1px solid #77230F;
     border-radius: 10px/100%;
-    cursor: url('../aa.png'), pointer;
+    cursor: url('../img/cursor.png'), pointer;
     width:15px;
     height: 26px;
 }
 input[type=range]::-moz-range-thumb:active {
     box-shadow: 0 0 3px rgba(242, 232, 213, .59);
-    cursor: url('../aa.png'), pointer;
+    cursor: url('../img/cursor.png'), pointer;
 }
 /* слайдер конец */
 
 
 .btn_play {
-    display: block;
     margin: 38px auto;
     height: 79px;
     min-width: 79px;
