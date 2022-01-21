@@ -30,6 +30,11 @@ window.onload = () => {
         getRandomWords("en", "ru");
         get_translate_btn_ru.removeAttribute("disabled");
         get_translate_btn_en.setAttribute("disabled", "disabled");
+        if (window.innerWidth <= '403') {
+            get_translate_btn_ru.innerText = 'ПЕРЕВОД'
+        } else {
+            get_translate_btn_ru.innerText = 'ПОКАЗАТЬ ПЕРЕВОД'
+        }
     });
 
     get_translate_btn_ru.addEventListener('click', (evt) => {
@@ -41,6 +46,11 @@ window.onload = () => {
         getRandomWords("ru", "en");
         get_translate_btn_en.removeAttribute("disabled");
         get_translate_btn_ru.setAttribute("disabled", "disabled");
+        if (window.innerWidth <= '403') {
+            get_translate_btn_en.innerText = 'ПЕРЕВОД'
+        } else {
+            get_translate_btn_en.innerText = 'ПОКАЗАТЬ ПЕРЕВОД'
+        }
     });
 
     get_translate_btn_en.addEventListener('click', (evt) => {
@@ -50,7 +60,6 @@ window.onload = () => {
 
 
     const event = new Event('click');
-    btn_play.dispatchEvent(event);
     get_random_btn_en.dispatchEvent(event);
 
 }
@@ -60,7 +69,7 @@ function $(el) {
     return document.querySelector(el);
 }
 
-function sizeRenameBtn (width, get_translate_btn_en, get_translate_btn_ru) {
+function sizeRenameBtn(width, get_translate_btn_en, get_translate_btn_ru) {
     if (width <= '403') {
         if (get_translate_btn_ru.innerText === 'ПОКАЗАТЬ ПЕРЕВОД' || get_translate_btn_ru.innerText === 'ПЕРЕВОД') {
             get_translate_btn_ru.textContent = 'ПЕРЕВОД'
@@ -68,7 +77,7 @@ function sizeRenameBtn (width, get_translate_btn_en, get_translate_btn_ru) {
             get_translate_btn_ru.textContent = 'СКРЫТЬ'
         }
 
-        if(get_translate_btn_en.innerText === 'ПОКАЗАТЬ ПЕРЕВОД' || get_translate_btn_en.innerText === 'ПЕРЕВОД') {
+        if (get_translate_btn_en.innerText === 'ПОКАЗАТЬ ПЕРЕВОД' || get_translate_btn_en.innerText === 'ПЕРЕВОД') {
             get_translate_btn_en.textContent = 'ПЕРЕВОД'
         } else {
             console.log(get_translate_btn_en.innerText);
@@ -81,7 +90,7 @@ function sizeRenameBtn (width, get_translate_btn_en, get_translate_btn_ru) {
             get_translate_btn_ru.textContent = 'СКРЫТЬ ПЕРЕВОД'
         }
 
-        if(get_translate_btn_en.innerText === 'ПОКАЗАТЬ ПЕРЕВОД' || get_translate_btn_en.innerText === 'ПЕРЕВОД') {
+        if (get_translate_btn_en.innerText === 'ПОКАЗАТЬ ПЕРЕВОД' || get_translate_btn_en.innerText === 'ПЕРЕВОД') {
             get_translate_btn_en.textContent = 'ПОКАЗАТЬ ПЕРЕВОД'
         } else {
             console.log(get_translate_btn_en.innerText);
