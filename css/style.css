@@ -41,6 +41,9 @@ ul>li {
 .btn:active {
     background-color: #bbb4a5;
 }
+.get_translate_btns {
+    min-width: 200px;
+}
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -59,7 +62,10 @@ ul>li {
     width: 100%;
     height: 100%;
     z-index: -1;
-
+    background-image: url('../img/back.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 }
 .hidden {
     display: none;

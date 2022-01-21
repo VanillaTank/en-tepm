@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <img class="background" src="./img/back.jpg" alt="background">
+    <div class="background"></div>
     <div class="container">
 
         <div class="content">
@@ -24,11 +24,11 @@
                     <div class="word_count">Всего слов: <span id="outputAmountWord"></span></div>
                     <div>
                         <button class="btn" id="get_random_btn_en">EN-RU</button>
-                        <button class="btn" id="get_ru_btn_ru" disabled>Показать перевод</button>
+                        <button class="btn get_translate_btns" id="get_ru_btn_ru" disabled>Показать перевод</button>
                     </div>
                     <div>
                         <button class="btn" id="get_random_btn_ru">RU-EN</button>
-                        <button class="btn" id="get_ru_btn_en" disabled>Показать перевод</button>
+                        <button class="btn get_translate_btns" id="get_ru_btn_en" disabled>Показать перевод</button>
                     </div>
                     <div class="font_size_manage">
                         Размер шрифта </br>
@@ -66,7 +66,7 @@
 
     </div>
 
-    <audio data-played="true" id="HP_GRIFFINDOR_SOUND" src="./sound/HP_GRIFFINDOR.mp3" loop></audio>
+    <audio data-played="false" id="HP_GRIFFINDOR_SOUND" src="./sound/HP_GRIFFINDOR.mp3" loop></audio>
     <script type="module" src="./js/main.js"></script>
 
 </body>

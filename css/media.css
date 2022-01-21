@@ -51,6 +51,9 @@
     .img_play {
         margin-left: 7px;
     }
+    .get_translate_btns {
+        min-width: 100px;
+    }
 }
 @media(max-width: 888px) {
     .word-list li {
@@ -71,6 +74,9 @@
         height: 70px;
         min-width: 70px;
         margin: 0;
+    }
+    .img_pause {
+        margin-top: -2px;
     }
 }
 @media(max-width: 505px) {
