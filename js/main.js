@@ -12,17 +12,23 @@ window.onload = () => {
     const fonter = $('#fonter');
     const img_pause = $('.img_pause');
     const img_play = $('.img_play');
+    const searchInput = $('#search');
+    const searchOutput = $('.search-output');
 
     word_list.style.fontSize = fonter;
-    fonter.addEventListener('input', (evt) => { word_list.style.fontSize = `${evt.target.value}px` })
+    fonter.addEventListener('input', (evt) => {
+        word_list.style.fontSize = `${evt.target.value}px`
+    })
 
 
     output_amount_word.innerText = dict.length;
 
-    btn_play.addEventListener('click', () => { on_click_btn_play(sound_HP_GRIFFINDOR, img_play, img_pause) }, false)
+    btn_play.addEventListener('click', () => {
+        on_click_btn_play(sound_HP_GRIFFINDOR, img_play, img_pause)
+    }, false)
 
     sizeRenameBtn(window.innerWidth, get_translate_btn_en, get_translate_btn_ru);
-    window.addEventListener(`resize`, event => {
+    window.addEventListener(`resize`, () => {
         sizeRenameBtn(window.innerWidth, get_translate_btn_en, get_translate_btn_ru);
     }, false);
 
@@ -62,12 +68,35 @@ window.onload = () => {
     const event = new Event('click');
     get_random_btn_en.dispatchEvent(event);
 
+    searchInput.addEventListener('input', () => {
+        searchOnchange(searchInput.value, searchOutput)
+    })
+
 }
 
 // -------------------------------------
 function $(el) {
     return document.querySelector(el);
 }
+
+function searchOnchange(value, output) {
+    output.innerHTML = '';
+    if (value === '') {
+        return
+    }
+    const filtredDict = dict
+        .filter((el) => {
+            return el.ru.includes(value) || el.en.includes(value)
+        })
+
+    if(filtredDict.length === 0) {
+        output.innerHTML += `<li> Nothing found </li>`
+        return
+    }
+
+    filtredDict.map(el => output.innerHTML += `<li> ${el.en} - ${el.ru} </li>`);
+}
+
 
 function sizeRenameBtn(width, get_translate_btn_en, get_translate_btn_ru) {
     if (width <= '403') {

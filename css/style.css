@@ -185,7 +185,28 @@ input[type=range]::-moz-range-thumb:active {
     margin-left: 10px;
 }
 
-
+.search-input {
+    box-shadow: none;
+    display: block;
+    width: 100%;
+    padding: 7px 15px;
+    border-radius: 3px;
+    font-size: 20px;
+    border: 1px solid #CBC4B7;
+    color: #2C150D;
+    font-weight: 600;
+}
+.search-input::placeholder {
+    font-weight: 500;
+    font-size: 18px;
+}
+.search-output {
+    margin-top: 15px;
+}
+.search-output li {
+    font-size: 20px;
+    padding: 10px 5px;
+}
 /* WORDS BLOCK */
 .word-list_section {
     background-color: rgba(25, 20, 20, .9);
@@ -204,3 +225,4 @@ input[type=range]::-moz-range-thumb:active {
 .word-list span {
     font-size: inherit;
 }
+
