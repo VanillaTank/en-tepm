@@ -209,15 +209,15 @@ input[type=range]::-moz-range-thumb:active {
 }
 /* WORDS BLOCK */
 .word-list_section {
-    background-color: rgba(25, 20, 20, .9);
-    box-shadow: 0 0 3px #F2E8D5;
-    padding: 32px 28px;
     width: 660px;
-    border-radius: 2px; 
 }
 
 .word-list {
     font-size: 24px;
+    background-color: rgba(25, 20, 20, .9);
+    box-shadow: 0 0 3px #F2E8D5;
+    padding: 32px 28px;
+    border-radius: 2px; 
 }
 .word-list li {
     font-size: inherit;
