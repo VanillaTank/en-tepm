@@ -189,12 +189,16 @@ input[type=range]::-moz-range-thumb:active {
     box-shadow: none;
     display: block;
     width: 100%;
-    padding: 7px 15px;
+    padding: 7px 15px 7px 35px;
     border-radius: 3px;
     font-size: 20px;
     border: 1px solid #CBC4B7;
     color: #2C150D;
     font-weight: 600;
+    background-color: #efece4;
+}
+.search-input:focus {
+    background-color: #fffdfa;
 }
 .search-input::placeholder {
     font-weight: 500;
@@ -207,11 +211,25 @@ input[type=range]::-moz-range-thumb:active {
     font-size: 20px;
     padding: 10px 5px;
 }
+.search-input-container {
+    position: relative;
+}
+.search-input-container::after {
+    content: '';
+    position: absolute;
+    top: calc(50% - 14px);
+    left: 7px;
+    width: 25px;
+    height: 25px;
+    background-image: url('../img/magnifier.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
 /* WORDS BLOCK */
 .word-list_section {
     width: 660px;
 }
-
 .word-list {
     font-size: 24px;
     background-color: rgba(25, 20, 20, .9);
