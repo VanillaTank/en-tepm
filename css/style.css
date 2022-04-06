@@ -189,7 +189,7 @@ input[type=range]::-moz-range-thumb:active {
     box-shadow: none;
     display: block;
     width: 100%;
-    padding: 7px 15px 7px 35px;
+    padding: 7px 38px;
     border-radius: 3px;
     font-size: 20px;
     border: 1px solid #CBC4B7;
@@ -204,6 +204,25 @@ input[type=range]::-moz-range-thumb:active {
     font-weight: 500;
     font-size: 18px;
 }
+.clear-btn {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 5px;
+    color: #2C150D;
+    border: none;
+    box-shadow: none;
+    padding: 0 5px;
+    background-color: transparent;
+    font-weight: 600;
+}
+.clear-btn:hover {
+   color: #62240f;
+}
+.clear-btn:active {
+    color: #2C150D;
+}
+
 .search-output {
     margin-top: 15px;
 }

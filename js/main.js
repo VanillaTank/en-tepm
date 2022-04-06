@@ -14,6 +14,7 @@ window.onload = () => {
     const img_play = $('.img_play');
     const searchInput = $('#search');
     const searchOutput = $('.search-output');
+    const searchClearBtn = $('.clear-btn');
 
     word_list.style.fontSize = fonter;
     fonter.addEventListener('input', (evt) => {
@@ -69,8 +70,10 @@ window.onload = () => {
     get_random_btn_en.dispatchEvent(event);
 
     searchInput.addEventListener('input', () => {
-        searchOnchange(searchInput.value, searchOutput)
+        searchOnchange(searchInput.value.trim(), searchOutput)
     })
+
+    searchClearBtn.addEventListener('click', () => onClickClearBtn(searchInput, searchOutput))
 
 }
 
@@ -84,12 +87,35 @@ function searchOnchange(value, output) {
     if (value === '') {
         return
     }
-    const filtredDict = dict
-        .filter((el) => {
-            return el.ru.includes(value) || el.en.includes(value)
-        })
 
-    if(filtredDict.length === 0) {
+    let filtredDict = [];
+
+    if (value.search(/[A-Za-z]/) !== -1) {
+        const redExp = new RegExp(`\\b${value}`, 'i')
+        filtredDict = dict
+            .filter((el) => { return el.en.search(redExp) !== -1 })
+    } else {
+        const redExp = new RegExp(`^${value}`, 'i')
+        dict
+            .map((el) => {
+                if (el.ru.indexOf(',') === -1) {
+                    if (el.ru.search(redExp) !== -1) {
+                        filtredDict.push(el)
+                    }
+                }
+                else {
+                    el.ru.split(', ')
+                    .map(sense => {
+                        if (sense.search(redExp) !== -1) {
+                            filtredDict.push(el)
+                        }
+                    })
+                }
+            })
+    }
+
+
+    if (filtredDict.length === 0) {
         output.innerHTML += `<li> Nothing found </li>`
         return
     }
@@ -97,6 +123,10 @@ function searchOnchange(value, output) {
     filtredDict.map(el => output.innerHTML += `<li> ${el.en} - ${el.ru} </li>`);
 }
 
+function onClickClearBtn(searchInput, searchOutput) {
+    searchInput.value = ''
+    searchOutput.innerHTML = ''
+}
 
 function sizeRenameBtn(width, get_translate_btn_en, get_translate_btn_ru) {
     if (width <= '403') {
