@@ -209,7 +209,7 @@ input[type=range]::-moz-range-thumb:active {
     top: 0;
     bottom: 0;
     right: 5px;
-    color: #2C150D;
+    color: #24130c;
     border: none;
     box-shadow: none;
     padding: 0 5px;
@@ -244,6 +244,7 @@ input[type=range]::-moz-range-thumb:active {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    pointer-events: none;
 }
 /* WORDS BLOCK */
 .word-list_section {
