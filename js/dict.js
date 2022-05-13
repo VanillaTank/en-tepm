@@ -1560,7 +1560,7 @@ export default [
     {en: 'a cuff', ru: 'манжета'},
     {en: 'a sleeve', ru: 'рукав'},
     {en: 'to interrupt', ru: 'прерывать, перебивать'},
-    // {en: '', ru: ''},
+    {en: 'festivity', ru: 'веселье, праздничное настроение'},
     // {en: '', ru: ''},
     // {en: '', ru: ''},
     // {en: '', ru: ''},
