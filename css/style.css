@@ -41,6 +41,12 @@ ul>li {
 .btn:active {
     background-color: #bbb4a5;
 }
+.btn:disabled {
+    background-color: #a39c8d;
+}
+.btn:disabled:hover {
+    box-shadow:none;
+}
 .get_translate_btns {
     min-width: 200px;
 }
@@ -209,7 +215,7 @@ input[type=range]::-moz-range-thumb:active {
     top: 0;
     bottom: 0;
     right: 5px;
-    color: #24130c;
+    color: #312410;
     border: none;
     box-shadow: none;
     padding: 0 5px;
@@ -217,7 +223,7 @@ input[type=range]::-moz-range-thumb:active {
     font-weight: 600;
 }
 .clear-btn:hover {
-   color: #62240f;
+   color: #3f341c;
 }
 .clear-btn:active {
     color: #2C150D;
@@ -236,7 +242,7 @@ input[type=range]::-moz-range-thumb:active {
 .search-input-container::after {
     content: '';
     position: absolute;
-    top: calc(50% - 14px);
+    top: calc(50% - 10px);
     left: 7px;
     width: 25px;
     height: 25px;
@@ -245,6 +251,9 @@ input[type=range]::-moz-range-thumb:active {
     background-size: cover;
     background-position: center center;
     pointer-events: none;
+}
+.lang-button-group {
+    font-size: 0;
 }
 /* WORDS BLOCK */
 .word-list_section {

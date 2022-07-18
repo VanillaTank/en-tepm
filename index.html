@@ -8,75 +8,76 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/media.css">
     <title>Временный диктант</title>
 </head>
 
 <body>
-    <div class="background"></div>
-    <div class="container">
+<div class="background"></div>
+<div class="container">
 
-        <div class="content">
-            <div>
-                <div class="manage-panel">
-                    <div class="word_count">Всего слов: <span id="outputAmountWord"></span></div>
-                    <div class="lang-button-group">
-                        <button class="btn" id="get_random_btn_en">EN-RU</button>
-                        <button class="btn get_translate_btns" id="get_ru_btn_ru" disabled>Показать перевод</button>
-                    </div>
-                    <div class="lang-button-group">
-                        <button class="btn" id="get_random_btn_ru">RU-EN</button>
-                        <button class="btn get_translate_btns" id="get_ru_btn_en" disabled>Показать перевод</button>
-                    </div>
-                    <div class="font_size_manage">
-                        Размер шрифта <br>
+    <div class="content">
+        <div>
+            <div class="manage-panel">
+                <div class="word_count">Всего слов: <span id="outputAmountWord"></span></div>
+                <div class="lang-button-group">
+                    <button class="btn" id="get_random_btn_en">EN-RU</button>
+                    <button class="btn get_translate_btns" id="get_ru_btn_ru" disabled>Показать перевод</button>
+                </div>
+                <div class="lang-button-group">
+                    <button class="btn" id="get_random_btn_ru">RU-EN</button>
+                    <button class="btn get_translate_btns" id="get_ru_btn_en" disabled>Показать перевод</button>
+                </div>
+                <div class="font_size_manage">
+                    Размер шрифта <br>
 
-                        <input class="font_size_manage_slider" id="fonter" type="range" min="16" max="32" value="24"
-                            step="2" list="datalist" />
-                        <datalist id="datalist">
-                            <option value="16" label="16"></option>
-                            <option value="18"></option>
-                            <option value="20"></option>
-                            <option value="22"></option>
-                            <option value="24" label="24"></option>
-                            <option value="26"></option>
-                            <option value="28"></option>
-                            <option value="30"></option>
-                            <option value="32" label="32"></option>
-                        </datalist>
-
-                    </div>
-                    <button class="btn btn_play" id="btn_play">
-                        <img class="img_play" src="./img/Play.svg" alt="Play">
-                        <img class="img_pause hidden" src="./img/pause.svg" alt="Pause">
-                    </button>
-
-                    <div class="search-block">
-                        <div class="search-input-container">
-                           <input class="search-input" type="text" id="search" placeholder="Search" />
-                           <button class="clear-btn">X</button>
-                        </div>
-                        
-                        <ul class="search-output"></ul>
-                    </div>
+                    <input class="font_size_manage_slider" id="fonter" type="range" min="16" max="32" value="24"
+                           step="2" list="datalist"/>
+                    <datalist id="datalist">
+                        <option value="16" label="16"></option>
+                        <option value="18"></option>
+                        <option value="20"></option>
+                        <option value="22"></option>
+                        <option value="24" label="24"></option>
+                        <option value="26"></option>
+                        <option value="28"></option>
+                        <option value="30"></option>
+                        <option value="32" label="32"></option>
+                    </datalist>
 
                 </div>
+                <button class="btn btn_play" id="btn_play">
+                    <img class="img_play" src="./img/Play.svg" alt="Play">
+                    <img class="img_pause hidden" src="./img/pause.svg" alt="Pause">
+                </button>
+
+                <div class="search-block">
+                    <div class="search-input-container">
+                        <input class="search-input" type="text" id="search" placeholder="Search"/>
+                        <button class="clear-btn">X</button>
+                    </div>
+
+                    <ul class="search-output"></ul>
+                </div>
+
             </div>
-
-
-            <div class="word-list_section">
-                <ul id="output_random" class="word-list">
-                </ul>
-            </div>
-
         </div>
-    </div>
 
-    <audio data-played="false" id="HP_GRIFFINDOR_SOUND" src="./sound/HP_GRIFFINDOR.mp3" loop></audio>
-    <script type="module" src="./js/main.js"></script>
+
+        <div class="word-list_section">
+            <ul id="output_random" class="word-list">
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+<audio data-played="false" id="HP_GRIFFINDOR_SOUND" src="./sound/HP_GRIFFINDOR.mp3" loop></audio>
+<script type="module" src="./js/main.js"></script>
 
 </body>
+<a href="https://www.flaticon.com/free-icons/broom" title="broom icons"></a>
 
 </html>
