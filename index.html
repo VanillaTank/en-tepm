@@ -22,11 +22,11 @@
             <div>
                 <div class="manage-panel">
                     <div class="word_count">Всего слов: <span id="outputAmountWord"></span></div>
-                    <div>
+                    <div class="lang-button-group">
                         <button class="btn" id="get_random_btn_en">EN-RU</button>
                         <button class="btn get_translate_btns" id="get_ru_btn_ru" disabled>Показать перевод</button>
                     </div>
-                    <div>
+                    <div class="lang-button-group">
                         <button class="btn" id="get_random_btn_ru">RU-EN</button>
                         <button class="btn get_translate_btns" id="get_ru_btn_en" disabled>Показать перевод</button>
                     </div>
@@ -34,7 +34,7 @@
                         Размер шрифта <br>
 
                         <input class="font_size_manage_slider" id="fonter" type="range" min="16" max="32" value="24"
-                            step="2" list="datalist">
+                            step="2" list="datalist" />
                         <datalist id="datalist">
                             <option value="16" label="16"></option>
                             <option value="18"></option>
@@ -55,7 +55,7 @@
 
                     <div class="search-block">
                         <div class="search-input-container">
-                           <input class="search-input" type="text" id="search" placeholder="Search"> 
+                           <input class="search-input" type="text" id="search" placeholder="Search" />
                            <button class="clear-btn">X</button>
                         </div>
                         

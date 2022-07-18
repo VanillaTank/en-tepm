@@ -124,8 +124,9 @@ function searchOnchange(value, output) {
 }
 
 function onClickClearBtn(searchInput, searchOutput) {
-    searchInput.value = ''
-    searchOutput.innerHTML = ''
+    searchInput.value = '';
+    searchOutput.innerHTML = '';
+    searchInput.focus();
 }
 
 function sizeRenameBtn(width, get_translate_btn_en, get_translate_btn_ru) {

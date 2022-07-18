@@ -1,96 +1,130 @@
-@media(max-width: 1250px) {
-    .container{
+@media (max-width: 1250px) {
+    .container {
         padding: 0 30px;
     }
 }
-@media(max-width: 1140px) {
-    .word-list_section{
-       width: 550px;
+
+@media (max-width: 1140px) {
+    .word-list_section {
+        width: 550px;
     }
 }
-@media(max-width: 1024px) {
-    .content{
-       flex-wrap: wrap;
+
+@media (max-width: 1024px) {
+    .content {
+        flex-wrap: wrap;
     }
+
     .content div {
         width: 100%;
     }
+
     .manage-panel {
         position: static;
         margin: 0 0 50px 0;
     }
+
     .word_count {
         font-size: 18px;
     }
+
     .word_count span {
         font-size: 18px;
     }
+
     .btn {
         font-size: 14px;
     }
+
     .font_size_manage {
         display: none;
     }
+
     .manage-panel {
         max-width: 100%;
         display: grid;
         grid-template-columns: 322px 1fr;
     }
+
     .manage-panel div {
         grid-column: 1/2;
     }
+
     .manage-panel .btn {
         margin-top: 0;
     }
+
     .btn_play {
         display: block;
         grid-column: 2/3;
         grid-row: 2/4;
         margin: 0 10px;
     }
+
     .img_play {
         margin-left: 7px;
     }
+
     .get_translate_btns {
         min-width: 100px;
     }
 }
-@media(max-width: 888px) {
+
+@media (max-width: 888px) {
     .word-list li {
         font-size: 20px;
     }
 }
-@media(max-width: 530px) {
+
+@media (max-width: 530px) {
     .manage-panel {
         max-width: 100%;
         display: grid;
         grid-template-columns: 1fr;
     }
 
+    .lang-button-group {
+        display: flex;
+        justify-content: space-between;
+    }
+    .get_translate_btns {
+        max-width: 100%;
+        min-width: auto;
+        width: 100%;
+    }
     .btn_play {
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         grid-column: 1/2;
         grid-row: 4/5;
-        height: 70px;
-        min-width: 70px;
+        height: 60px;
+        min-width: 100%;
+        padding: 0;
         margin: 0 0 15px 0;
     }
+
     .img_pause {
         margin-top: -2px;
     }
 }
-@media(max-width: 505px) {
+
+@media (max-width: 505px) {
     .manage-panel {
         padding: 15px;
         margin: 0 0 30px 0;
     }
+
     .content {
         margin-top: 30px;
     }
+
     .word-list li {
         font-size: 18px;
     }
+
+    .img_play {
+        margin-left: 3px;
+    }
 }
-@media(max-width: 403px) {
-    
-}
+
