@@ -1669,7 +1669,7 @@ export default [
     {en: 'a passage', ru: 'коридор, проход, отрывок, превращение'},
     {en: 'a torch', ru: 'карманный фонарик, факел'},
     {en: 'to crouch', ru: 'садиться на корточки, приседать'},
-    {en: 'whereabouts', ru: 'местонахождение'},
+    {en: 'a whereabouts', ru: 'местонахождение'},
     {en: 'to shelter', ru: 'приютить'},
     {en: 'a treason', ru: 'государственная измена'},
     {en: 'a dawn', ru: 'рассвет'},
