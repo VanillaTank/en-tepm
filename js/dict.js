@@ -265,7 +265,7 @@ export default [
     {en: "minutiae", ru: "мелочи, детали"},
     {en: "below", ru: "ниже, под"},
     {en: "to aim", ru: "ставить целью, нацеливаться, стремиться"},
-    {en: "continuity", ru: "непрерывность"},
+    {en: "a continuity", ru: "непрерывность"},
     {en: "concise", ru: "краткий, лаконичный"},
     {en: "a closure", ru: "замыкание"},
     {en: "to introduce", ru: "представлять(выпускать)"},
