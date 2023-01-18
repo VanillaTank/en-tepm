@@ -1,4 +1,5 @@
 import dict from './dict.js';
+const DEBOUNCE_INTERVAL = 250;
 
 window.onload = () => {
     const get_random_btn_en = $('#get_random_btn_en');
@@ -69,9 +70,8 @@ window.onload = () => {
     const event = new Event('click');
     get_random_btn_en.dispatchEvent(event);
 
-    searchInput.addEventListener('input', () => {
-        searchOnchange(searchInput.value.trim(), searchOutput)
-    })
+    const searchInputHandler = debounce(() => { searchOnchange(searchInput.value.trim(), searchOutput) })
+    searchInput.addEventListener('input', searchInputHandler);
 
     searchClearBtn.addEventListener('click', () => onClickClearBtn(searchInput, searchOutput))
 
@@ -80,6 +80,22 @@ window.onload = () => {
 // -------------------------------------
 function $(el) {
     return document.querySelector(el);
+}
+
+//сам дебаунсер
+function debounce(fun) {
+    let lastTimeout = null;
+
+    return function () {
+        const args = arguments;
+        if (lastTimeout) {
+            window.clearTimeout(lastTimeout);
+        }
+        lastTimeout = window.setTimeout(function () {
+            lastTimeout = null;
+            fun.apply(null, args);
+        }, DEBOUNCE_INTERVAL);
+    }
 }
 
 function searchOnchange(value, output) {
@@ -105,11 +121,11 @@ function searchOnchange(value, output) {
                 }
                 else {
                     el.ru.split(', ')
-                    .map(sense => {
-                        if (sense.search(redExp) !== -1) {
-                            filtredDict.push(el)
-                        }
-                    })
+                        .map(sense => {
+                            if (sense.search(redExp) !== -1) {
+                                filtredDict.push(el)
+                            }
+                        })
                 }
             })
     }
