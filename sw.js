@@ -65,6 +65,6 @@ self.addEventListener("activate", (e) => {
 self.addEventListener("fetch", (e) => {
     // Try network and if it fails, go to cached copy
     e.respondWith(
-        tryNetwork(e.request, 200).catch(() => getFromCache(e.request))
+        tryNetwork(e.request, 400).catch(() => getFromCache(e.request))
     );
 })
