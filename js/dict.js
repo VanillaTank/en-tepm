@@ -2326,6 +2326,7 @@ export default [
     {en: 'dissatisfied', ru: 'неудовлетворенный, недовольный'},
     {en: 'disillusioned', ru: 'разочарованный'},
     {en: 'supplementary', ru: 'дополнительный'},
+    {en: 'supplementary', ru: 'дополнительный'},
 
 // ------------------------------------
     //     {en: '', ru: ''},
