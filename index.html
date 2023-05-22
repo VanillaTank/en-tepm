@@ -76,6 +76,13 @@
 
 <audio data-played="false" id="HP_GRIFFINDOR_SOUND" src="./sound/HP_GRIFFINDOR.mp3" loop></audio>
 <script type="module" src="./js/main.js"></script>
+<script>
+    const onWorkerReady = () => {
+        console.log("SW is ready!");
+    }
+    navigator.serviceWorker.register("sw.js");
+    navigator.serviceWorker.ready.then(onWorkerReady)
+</script>
 
 </body>
 <a href="https://www.flaticon.com/free-icons/broom" title="broom icons"></a>
