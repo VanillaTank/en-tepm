@@ -1,5 +1,5 @@
 // Чтобы обновить кеш, измени значение CacheKey
-const CacheKey = "cache-1";
+const CacheKey = "03/06/2023";
 
 const initCache = () => {
     return caches.open(CacheKey)
