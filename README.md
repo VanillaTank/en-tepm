@@ -1,2 +1,2 @@
 # en-temp
-https://vanillatank.github.io/en-temp/
+https://vanillatank.github.io/foreign-words-memory
