@@ -15,6 +15,7 @@
 </head>
 
 <body>
+<div id="innerWidth"></div>
 <div class="background"></div>
 <div class="container">
 
@@ -77,6 +78,9 @@
 <audio data-played="false" id="HP_GRIFFINDOR_SOUND" src="./sound/HP_GRIFFINDOR.mp3" loop></audio>
 <script type="module" src="./js/main.js"></script>
 <script>
+    window.onload = () => {
+        document.getElementById('innerWidth').textContent = window.innerWidth
+    }
     const onWorkerReady = () => {
         console.log("SW is ready!");
     }
