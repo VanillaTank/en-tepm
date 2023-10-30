@@ -22,7 +22,6 @@
         <div>
             <div class="manage-panel">
                 <div class="word_count">Всего слов: <span id="outputAmountWord"></span></div>
-                <div id="innerWidth"></div>
                 <div class="lang-button-group">
                     <button class="btn" id="get_random_btn_en">EN-RU</button>
                     <button class="btn get_translate_btns" id="get_ru_btn_ru" disabled>Показать перевод</button>
@@ -78,7 +77,6 @@
 <audio data-played="false" id="HP_GRIFFINDOR_SOUND" src="./sound/HP_GRIFFINDOR.mp3" loop></audio>
 <script type="module" src="./js/main.js"></script>
 <script>
-    document.getElementById('innerWidth').textContent = window.innerWidth
     const onWorkerReady = () => {
         console.log("SW is ready!");
     }
